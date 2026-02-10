@@ -1,14 +1,12 @@
 package main
 
 import (
-	"fmt"
-
 	"github.com/toffettl/gopportunities/config"
 	"github.com/toffettl/gopportunities/router"
 )
 
 var (
-	logger config.Logger
+	logger *config.Logger
 )
 
 func main() {
@@ -16,7 +14,7 @@ func main() {
 	// Initialize Configs
 	err := config.Init()
 	if err != nil {
-		fmt.Println(err)
+		logger.Error("config: initialization error: %v", err)
 		return
 	}
 

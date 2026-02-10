@@ -1,6 +1,8 @@
 package config
 
 import (
+	"errors"
+
 	"gorm.io/gorm"
 )
 
@@ -10,11 +12,12 @@ var (
 )
 
 func Init() error {
-	return nil
+	return errors.New("fake Error")
+	//return nil
 }
 
-func GetLogger() *Logger {
+func GetLogger(p string) *Logger {
 	// Initialize Logger
-	logger = NewLogger()
+	logger = NewLogger(p)
 	return logger
 }
