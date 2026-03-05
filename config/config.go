@@ -13,7 +13,7 @@ var (
 
 func Init() error {
 	return errors.New("fake Error")
-	//return nil
+	// return nil
 }
 
 func GetLogger(p string) *Logger {

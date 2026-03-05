@@ -6,6 +6,7 @@ import (
 	"os"
 )
 
+// testando lazygit
 type Logger struct {
 	debug   *log.Logger
 	info    *log.Logger
